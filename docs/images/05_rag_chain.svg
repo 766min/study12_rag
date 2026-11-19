@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>RAG 체인: 질문이 두 갈래로 나뉘었다가 프롬프트에서 합쳐진다</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9z" fill="#94A3B8"/></marker>
+    <marker id="art" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9z" fill="#14B8A6"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="448" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="106" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="81" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">05 · RAG 체인</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">질문 하나가 두 갈래로 나뉘었다가 합쳐진다</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">딕셔너리 { } 는 RunnableParallel이 되어 두 갈래를 함께 실행한다</text>
+
+  <!-- question -->
+  <rect x="28" y="178" width="112" height="60" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+  <text x="84" y="203" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">질문</text>
+  <text x="84" y="223" text-anchor="middle" font-size="11.5" fill="#64748B">“대출 기간은?”</text>
+
+  <!-- parallel container -->
+  <rect x="160" y="116" width="572" height="184" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-dasharray="6 5"/>
+  <rect x="176" y="126" width="170" height="22" rx="11" fill="#F1F5F9"/>
+  <text x="261" y="141" text-anchor="middle" font-size="11.5" font-weight="700" fill="#334155">RunnableParallel (dict)</text>
+
+  <path d="M140 208 H164 V184 H180" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M164 208 V258 H180" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="184" y="158" width="140" height="52" rx="12" fill="#F0FDFA" stroke="#99F6E4"/>
+  <text x="254" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#134E4A" font-family="Consolas,'Courier New',monospace">retriever</text>
+  <text x="254" y="199" text-anchor="middle" font-size="11.5" fill="#0F766E">Document k개</text>
+  <line x1="326" y1="184" x2="352" y2="184" stroke="#14B8A6" stroke-width="2" marker-end="url(#art)"/>
+  <rect x="356" y="158" width="150" height="52" rx="12" fill="#F0FDFA" stroke="#99F6E4"/>
+  <text x="431" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#134E4A" font-family="Consolas,'Courier New',monospace">format_docs</text>
+  <text x="431" y="199" text-anchor="middle" font-size="11.5" fill="#0F766E">하나의 문자열로</text>
+  <line x1="508" y1="184" x2="546" y2="184" stroke="#14B8A6" stroke-width="2" marker-end="url(#art)"/>
+  <rect x="550" y="170" width="160" height="28" rx="14" fill="#0F766E"/>
+  <text x="630" y="189" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF" font-family="Consolas,'Courier New',monospace">context</text>
+
+  <rect x="184" y="232" width="322" height="52" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="345" y="254" text-anchor="middle" font-size="14" font-weight="700" fill="#334155" font-family="Consolas,'Courier New',monospace">RunnablePassthrough()</text>
+  <text x="345" y="273" text-anchor="middle" font-size="11.5" fill="#64748B">입력을 바꾸지 않고 그대로</text>
+  <line x1="508" y1="258" x2="546" y2="258" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="550" y="244" width="160" height="28" rx="14" fill="#475569"/>
+  <text x="630" y="263" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF" font-family="Consolas,'Courier New',monospace">question</text>
+
+  <!-- down to row 2 -->
+  <path d="M630 302 V318 H103 V334" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- row 2 -->
+  <rect x="28" y="338" width="150" height="58" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <text x="103" y="362" text-anchor="middle" font-size="14" font-weight="700" fill="#0F172A" font-family="Consolas,'Courier New',monospace">prompt</text>
+  <text x="103" y="381" text-anchor="middle" font-size="11.5" fill="#4F46E5">빈칸 두 개를 채움</text>
+  <line x1="180" y1="367" x2="214" y2="367" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="218" y="338" width="150" height="58" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <text x="293" y="362" text-anchor="middle" font-size="14" font-weight="700" fill="#0F172A" font-family="Consolas,'Courier New',monospace">model</text>
+  <text x="293" y="381" text-anchor="middle" font-size="11.5" fill="#4F46E5">LLM이 답 생성</text>
+  <line x1="370" y1="367" x2="404" y2="367" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="408" y="338" width="170" height="58" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <text x="493" y="362" text-anchor="middle" font-size="14" font-weight="700" fill="#0F172A" font-family="Consolas,'Courier New',monospace">StrOutputParser</text>
+  <text x="493" y="381" text-anchor="middle" font-size="11.5" fill="#4F46E5">메시지 → 문자열</text>
+  <line x1="580" y1="367" x2="614" y2="367" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="618" y="338" width="114" height="58" rx="14" fill="#FFFFFF" stroke="#BBF7D0" filter="url(#sh)"/>
+  <circle cx="644" cy="367" r="12" fill="#DCFCE7"/>
+  <path d="M638 367 l4 4 l8 -8" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="664" y="372" font-size="14" font-weight="700" fill="#0F172A">답변</text>
+
+  <text x="732" y="428" text-anchor="end" font-size="11" fill="#94A3B8">출처: langchain-core 1.8.1 소스 (runnables/base.py, passthrough.py)</text>
+  <text x="28" y="428" font-size="11.5" fill="#64748B">모든 블록이 Runnable이라 <tspan font-family="Consolas,'Courier New',monospace">|</tspan> 로 이어진다</text>
+</svg>
