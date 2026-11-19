@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 414" width="760" height="414" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>Temperature에 따른 다음 토큰 확률 변화</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect x="1" y="1" width="758" height="412" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="118" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="87" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">01 · Temperature</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">온도를 올리면 확률이 고르게 퍼진다</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">“대한민국의 수도는 ___” 다음에 올 토큰 후보와 확률</text>
+
+  <!-- left card -->
+  <rect x="28" y="116" width="330" height="222" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+  <rect x="48" y="132" width="64" height="24" rx="12" fill="#CCFBF1"/>
+  <text x="80" y="149" text-anchor="middle" font-size="13" font-weight="800" fill="#0F766E">T = 1</text>
+  <text x="122" y="149" font-size="12" fill="#64748B">교안 예시 값</text>
+  <g font-size="13.5" fill="#0F172A">
+    <text x="48" y="195" font-weight="700">서울</text>
+    <rect x="124" y="184" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="124" y="184" width="167.5" height="14" rx="7" fill="#0F766E"/>
+    <text x="340" y="195" text-anchor="end" font-size="12.5" font-weight="700">98.5%</text>
+    <text x="48" y="233">아름다운</text>
+    <rect x="124" y="222" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="124" y="222" width="4" height="14" rx="2" fill="#5EEAD4"/>
+    <text x="340" y="233" text-anchor="end" font-size="12.5" fill="#475569">1.2%</text>
+    <text x="48" y="271">부산</text>
+    <rect x="124" y="260" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="124" y="260" width="3" height="14" rx="1.5" fill="#5EEAD4"/>
+    <text x="340" y="271" text-anchor="end" font-size="12.5" fill="#475569">0.2%</text>
+    <text x="48" y="309">파리</text>
+    <rect x="124" y="298" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="124" y="298" width="2" height="14" rx="1" fill="#5EEAD4"/>
+    <text x="340" y="309" text-anchor="end" font-size="12.5" fill="#475569">0.01%</text>
+  </g>
+
+  <!-- middle -->
+  <circle cx="380" cy="227" r="17" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <path d="M373 227h12m-4-5l5 5l-5 5" fill="none" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- right card -->
+  <rect x="402" y="116" width="330" height="222" rx="14" fill="#FFFFFF" stroke="#FDE68A" filter="url(#sh)"/>
+  <rect x="422" y="132" width="64" height="24" rx="12" fill="#FEF3C7"/>
+  <text x="454" y="149" text-anchor="middle" font-size="13" font-weight="800" fill="#B45309">T = 2</text>
+  <text x="496" y="149" font-size="12" fill="#64748B">온도를 높였을 때</text>
+  <g font-size="13.5" fill="#0F172A">
+    <text x="422" y="195" font-weight="700">서울</text>
+    <rect x="498" y="184" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="498" y="184" width="145.9" height="14" rx="7" fill="#D97706"/>
+    <text x="714" y="195" text-anchor="end" font-size="12.5" font-weight="700">85.8%</text>
+    <text x="422" y="233">아름다운</text>
+    <rect x="498" y="222" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="498" y="222" width="16.2" height="14" rx="7" fill="#FBBF24"/>
+    <text x="714" y="233" text-anchor="end" font-size="12.5" fill="#475569">9.5%</text>
+    <text x="422" y="271">부산</text>
+    <rect x="498" y="260" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="498" y="260" width="6.6" height="14" rx="3.3" fill="#FBBF24"/>
+    <text x="714" y="271" text-anchor="end" font-size="12.5" fill="#475569">3.9%</text>
+    <text x="422" y="309">파리</text>
+    <rect x="498" y="298" width="170" height="14" rx="7" fill="#F1F5F9"/><rect x="498" y="298" width="3" height="14" rx="1.5" fill="#FBBF24"/>
+    <text x="714" y="309" text-anchor="end" font-size="12.5" fill="#475569">0.9%</text>
+  </g>
+
+  <!-- takeaway -->
+  <rect x="28" y="352" width="704" height="28" rx="14" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="380" y="371" text-anchor="middle" font-size="12.5" fill="#92400E"><tspan font-weight="700">온도 ↑</tspan>  1등 확률은 줄고, 낮은 순위 토큰이 뽑힐 기회가 늘어난다 → 더 다양하고 더 무작위</text>
+  <text x="732" y="400" text-anchor="end" font-size="10.5" fill="#94A3B8">오른쪽 값: 교안 확률을 로짓 ÷ T 공식으로 다시 계산한 예시 · 출처: OpenAI API Reference</text>
+</svg>

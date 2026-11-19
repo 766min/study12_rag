@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>2단계 검색: 1차 검색으로 후보를 뽑고 리랭커로 다시 순위를 매긴다</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9z" fill="#94A3B8"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="378" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="96" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="76" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">07 · 리랭킹</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">빠르게 넉넉히 뽑고, 정교하게 다시 줄 세운다</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">Retrieve &amp; Re-Rank · 점수는 개념 설명용 예시 값</text>
+
+  <!-- A -->
+  <rect x="28" y="116" width="160" height="208" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+  <rect x="62" y="150" width="70" height="88" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <rect x="72" y="160" width="70" height="88" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <rect x="82" y="170" width="70" height="88" rx="8" fill="#FFFFFF" stroke="#94A3B8"/>
+  <g stroke="#CBD5E1" stroke-width="2"><line x1="92" y1="186" x2="142" y2="186"/><line x1="92" y1="198" x2="142" y2="198"/><line x1="92" y1="210" x2="134" y2="210"/><line x1="92" y1="222" x2="142" y2="222"/><line x1="92" y1="234" x2="124" y2="234"/></g>
+  <text x="108" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#0F172A">전체 문서</text>
+  <text x="108" y="305" text-anchor="middle" font-size="11.5" fill="#64748B">수천 ~ 수백만 개</text>
+
+  <line x1="190" y1="220" x2="234" y2="220" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- B -->
+  <rect x="238" y="116" width="226" height="208" rx="14" fill="#FFFFFF" stroke="#99F6E4" filter="url(#sh)"/>
+  <rect x="252" y="128" width="160" height="22" rx="11" fill="#CCFBF1"/>
+  <text x="332" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#0F766E">1차 검색 · 빠르게 넉넉히</text>
+  <g font-size="11.5" font-weight="700" text-anchor="middle">
+    <rect x="254" y="162" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="300" y="177" fill="#475569">D3</text>
+    <rect x="356" y="162" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="402" y="177" fill="#475569">D5</text>
+    <rect x="254" y="190" width="92" height="22" rx="11" fill="#CCFBF1"/><text x="300" y="205" fill="#0F766E">D1</text>
+    <rect x="356" y="190" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="402" y="205" fill="#475569">D8</text>
+    <rect x="254" y="218" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="300" y="233" fill="#475569">D7</text>
+    <rect x="356" y="218" width="92" height="22" rx="11" fill="#CCFBF1"/><text x="402" y="233" fill="#0F766E">D4</text>
+    <rect x="254" y="246" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="300" y="261" fill="#475569">D9</text>
+    <rect x="356" y="246" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="402" y="261" fill="#475569">D6</text>
+    <rect x="254" y="274" width="92" height="22" rx="11" fill="#CCFBF1"/><text x="300" y="289" fill="#0F766E">D2</text>
+    <rect x="356" y="274" width="92" height="22" rx="11" fill="#F1F5F9"/><text x="402" y="289" fill="#475569">D10</text>
+  </g>
+  <text x="351" y="314" text-anchor="middle" font-size="11.5" fill="#64748B">BM25·벡터 · 순서는 대략적</text>
+
+  <line x1="466" y1="220" x2="508" y2="220" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- C -->
+  <rect x="512" y="116" width="220" height="208" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <rect x="526" y="128" width="170" height="22" rx="11" fill="#E0E7FF"/>
+  <text x="611" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">2차 리랭커 · 쌍마다 채점</text>
+  <g font-size="12.5" font-weight="700">
+    <rect x="526" y="162" width="192" height="30" rx="10" fill="#EEF2FF" stroke="#C7D2FE"/>
+    <text x="538" y="182" fill="#312E81">1  D1</text><rect x="600" y="172" width="70" height="10" rx="5" fill="#4F46E5"/><text x="708" y="182" text-anchor="end" fill="#312E81">0.94</text>
+    <rect x="526" y="198" width="192" height="30" rx="10" fill="#EEF2FF" stroke="#C7D2FE"/>
+    <text x="538" y="218" fill="#312E81">2  D4</text><rect x="600" y="208" width="65" height="10" rx="5" fill="#6366F1"/><text x="708" y="218" text-anchor="end" fill="#312E81">0.88</text>
+    <rect x="526" y="234" width="192" height="30" rx="10" fill="#EEF2FF" stroke="#C7D2FE"/>
+    <text x="538" y="254" fill="#312E81">3  D2</text><rect x="600" y="244" width="52" height="10" rx="5" fill="#818CF8"/><text x="708" y="254" text-anchor="end" fill="#312E81">0.71</text>
+  </g>
+  <text x="622" y="288" text-anchor="middle" font-size="11.5" fill="#94A3B8">나머지 7개는 버림</text>
+  <text x="622" y="314" text-anchor="middle" font-size="11.5" fill="#64748B">Cross-Encoder · 정확하지만 느림</text>
+
+  <rect x="28" y="338" width="430" height="28" rx="14" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="243" y="357" text-anchor="middle" font-size="12" fill="#3730A3">상위 <tspan font-family="Consolas,'Courier New',monospace">top_n</tspan>개(기본 3)만 <tspan font-weight="800">LLM 프롬프트 앞쪽</tspan>에 넣는다</text>
+  <text x="732" y="357" text-anchor="end" font-size="11" fill="#94A3B8">출처: SBERT Docs · langchain-classic 1.0.8</text>
+</svg>

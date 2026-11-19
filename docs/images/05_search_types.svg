@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>search_type 세 가지가 같은 후보에서 고르는 문서 비교</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect x="1" y="1" width="758" height="388" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="122" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="89" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">05 · search_type</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">같은 후보, 세 가지 고르는 법</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">후보 6개(관련도 점수)에서 k=3으로 고를 때 · 점수는 개념 설명용 예시 값</text>
+
+  <!-- candidates -->
+  <rect x="28" y="116" width="216" height="232" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+  <rect x="42" y="128" width="62" height="22" rx="11" fill="#F1F5F9"/>
+  <text x="73" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">후보</text>
+  <g font-size="12">
+    <rect x="42" y="162" width="188" height="26" rx="8" fill="#F0FDFA"/><text x="52" y="180" fill="#134E4A" font-weight="700">D1 대출 규정</text><text x="220" y="180" text-anchor="end" fill="#0F766E" font-weight="700">0.82</text>
+    <rect x="42" y="192" width="188" height="26" rx="8" fill="#F0FDFA"/><text x="52" y="210" fill="#134E4A" font-weight="700">D2 대출 규정(비슷)</text><text x="220" y="210" text-anchor="end" fill="#0F766E" font-weight="700">0.80</text>
+    <rect x="42" y="222" width="188" height="26" rx="8" fill="#F0FDFA"/><text x="52" y="240" fill="#134E4A" font-weight="700">D3 대출 FAQ(비슷)</text><text x="220" y="240" text-anchor="end" fill="#0F766E" font-weight="700">0.78</text>
+    <rect x="42" y="252" width="188" height="26" rx="8" fill="#EEF2FF"/><text x="52" y="270" fill="#312E81">D4 연체 규정</text><text x="220" y="270" text-anchor="end" fill="#4F46E5">0.55</text>
+    <rect x="42" y="282" width="188" height="26" rx="8" fill="#FEF3C7"/><text x="52" y="300" fill="#78350F">D5 장학금 규정</text><text x="220" y="300" text-anchor="end" fill="#B45309">0.41</text>
+    <rect x="42" y="312" width="188" height="26" rx="8" fill="#F1F5F9"/><text x="52" y="330" fill="#475569">D6 식당 안내</text><text x="220" y="330" text-anchor="end" fill="#64748B">0.22</text>
+  </g>
+
+  <!-- similarity -->
+  <rect x="256" y="116" width="152" height="232" rx="14" fill="#FFFFFF" stroke="#99F6E4" filter="url(#sh)"/>
+  <rect x="268" y="128" width="84" height="22" rx="11" fill="#CCFBF1"/>
+  <text x="310" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#0F766E">similarity</text>
+  <g font-size="12" font-weight="700" fill="#134E4A">
+    <rect x="268" y="162" width="128" height="26" rx="8" fill="#F0FDFA" stroke="#99F6E4"/><text x="278" y="180">D1 · 0.82</text>
+    <rect x="268" y="194" width="128" height="26" rx="8" fill="#F0FDFA" stroke="#99F6E4"/><text x="278" y="212">D2 · 0.80</text>
+    <rect x="268" y="226" width="128" height="26" rx="8" fill="#F0FDFA" stroke="#99F6E4"/><text x="278" y="244">D3 · 0.78</text>
+  </g>
+  <text x="332" y="282" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">점수 순 상위 k개</text>
+  <text x="332" y="300" text-anchor="middle" font-size="11.5" fill="#64748B">비슷한 내용만 3개</text>
+  <text x="332" y="318" text-anchor="middle" font-size="11" fill="#94A3B8">기본값</text>
+
+  <!-- threshold -->
+  <rect x="418" y="116" width="152" height="232" rx="14" fill="#FFFFFF" stroke="#FDE68A" filter="url(#sh)"/>
+  <rect x="428" y="128" width="132" height="22" rx="11" fill="#FEF3C7"/>
+  <text x="494" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#B45309">score_threshold 0.79</text>
+  <g font-size="12" font-weight="700" fill="#134E4A">
+    <rect x="430" y="162" width="128" height="26" rx="8" fill="#F0FDFA" stroke="#99F6E4"/><text x="440" y="180">D1 · 0.82</text>
+    <rect x="430" y="194" width="128" height="26" rx="8" fill="#F0FDFA" stroke="#99F6E4"/><text x="440" y="212">D2 · 0.80</text>
+    <rect x="430" y="226" width="128" height="26" rx="8" fill="none" stroke="#CBD5E1" stroke-dasharray="4 3"/><text x="494" y="244" text-anchor="middle" font-weight="400" fill="#94A3B8">커트라인 미달</text>
+  </g>
+  <text x="494" y="282" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">기준 넘는 것만 (k까지)</text>
+  <text x="494" y="300" text-anchor="middle" font-size="11.5" fill="#64748B">모자라면 적게 돌려준다</text>
+  <text x="494" y="318" text-anchor="middle" font-size="11" fill="#94A3B8">관련도 기준 (거리 아님)</text>
+
+  <!-- mmr -->
+  <rect x="580" y="116" width="152" height="232" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <rect x="592" y="128" width="54" height="22" rx="11" fill="#E0E7FF"/>
+  <text x="619" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">mmr</text>
+  <g font-size="12" font-weight="700">
+    <rect x="592" y="162" width="128" height="26" rx="8" fill="#F0FDFA" stroke="#99F6E4"/><text x="602" y="180" fill="#134E4A">D1 · 0.82</text>
+    <rect x="592" y="194" width="128" height="26" rx="8" fill="#EEF2FF" stroke="#C7D2FE"/><text x="602" y="212" fill="#312E81">D4 · 0.55</text>
+    <rect x="592" y="226" width="128" height="26" rx="8" fill="#FEF3C7" stroke="#FDE68A"/><text x="602" y="244" fill="#78350F">D5 · 0.41</text>
+  </g>
+  <text x="656" y="282" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">관련 + 서로 다르게</text>
+  <text x="656" y="300" text-anchor="middle" font-size="11.5" fill="#64748B">fetch_k=20개 중 k개</text>
+  <text x="656" y="318" text-anchor="middle" font-size="11" fill="#94A3B8">lambda_mult=0.5</text>
+
+  <rect x="28" y="356" width="380" height="24" rx="12" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="218" y="372" text-anchor="middle" font-size="11.5" fill="#3730A3">세 가지 모두 리트리버는 <tspan font-weight="800">문서만</tspan> 돌려준다 (점수는 버림)</text>
+  <text x="732" y="372" text-anchor="end" font-size="11" fill="#94A3B8">출처: langchain-core 1.8.1 소스 (vectorstores/base.py)</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>RAGAS Context Precision은 관련 문서의 순위에 따라 점수가 달라진다</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect x="1" y="1" width="758" height="388" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="178" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="117" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">09 · RAGAS Context Precision</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">같은 3/5라도, 위에 있어야 점수가 높다</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">검색 결과 5개 중 관련 문서 3개 · 관련 문서가 나올 때마다 그 위치까지의 정밀도를 평균</text>
+
+  <rect x="28" y="116" width="704" height="214" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+  <g font-size="11" font-weight="700" fill="#94A3B8" text-anchor="middle">
+    <text x="214" y="138">1위</text><text x="264" y="138">2위</text><text x="314" y="138">3위</text><text x="364" y="138">4위</text><text x="414" y="138">5위</text>
+  </g>
+
+  <!-- row 1 -->
+  <text x="48" y="174" font-size="13" font-weight="700" fill="#0F172A">관련 문서가 위에</text>
+  <g><rect x="194" y="152" width="40" height="34" rx="8" fill="#0F766E"/><rect x="244" y="152" width="40" height="34" rx="8" fill="#0F766E"/><rect x="294" y="152" width="40" height="34" rx="8" fill="#0F766E"/><rect x="344" y="152" width="40" height="34" rx="8" fill="#E2E8F0"/><rect x="394" y="152" width="40" height="34" rx="8" fill="#E2E8F0"/></g>
+  <text x="452" y="174" font-size="12" fill="#475569" font-family="Consolas,'Courier New',monospace">(1/1+2/2+3/3)/3</text>
+  <rect x="640" y="152" width="76" height="34" rx="17" fill="#0F766E"/>
+  <text x="678" y="174" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">1.00</text>
+
+  <!-- row 2 -->
+  <text x="48" y="238" font-size="13" font-weight="700" fill="#0F172A">섞여 있음</text>
+  <g><rect x="194" y="216" width="40" height="34" rx="8" fill="#0F766E"/><rect x="244" y="216" width="40" height="34" rx="8" fill="#E2E8F0"/><rect x="294" y="216" width="40" height="34" rx="8" fill="#0F766E"/><rect x="344" y="216" width="40" height="34" rx="8" fill="#E2E8F0"/><rect x="394" y="216" width="40" height="34" rx="8" fill="#0F766E"/></g>
+  <text x="452" y="238" font-size="12" fill="#475569" font-family="Consolas,'Courier New',monospace">(1/1+2/3+3/5)/3</text>
+  <rect x="640" y="216" width="76" height="34" rx="17" fill="#5EEAD4"/>
+  <text x="678" y="238" text-anchor="middle" font-size="15" font-weight="800" fill="#134E4A">0.76</text>
+
+  <!-- row 3 -->
+  <text x="48" y="302" font-size="13" font-weight="700" fill="#0F172A">관련 문서가 아래에</text>
+  <g><rect x="194" y="280" width="40" height="34" rx="8" fill="#E2E8F0"/><rect x="244" y="280" width="40" height="34" rx="8" fill="#E2E8F0"/><rect x="294" y="280" width="40" height="34" rx="8" fill="#0F766E"/><rect x="344" y="280" width="40" height="34" rx="8" fill="#0F766E"/><rect x="394" y="280" width="40" height="34" rx="8" fill="#0F766E"/></g>
+  <text x="452" y="302" font-size="12" fill="#475569" font-family="Consolas,'Courier New',monospace">(1/3+2/4+3/5)/3</text>
+  <rect x="640" y="280" width="76" height="34" rx="17" fill="#FFE4E6"/>
+  <text x="678" y="302" text-anchor="middle" font-size="15" font-weight="800" fill="#BE123C">0.48</text>
+
+  <rect x="28" y="344" width="430" height="28" rx="14" fill="#F0FDFA" stroke="#99F6E4"/>
+  <text x="243" y="363" text-anchor="middle" font-size="12" fill="#0F766E">일반 정밀도(TP/(TP+FP))로는 셋 다 <tspan font-weight="800">0.60</tspan> · 리랭킹이 점수를 올린다</text>
+  <text x="732" y="363" text-anchor="end" font-size="11" fill="#94A3B8">출처: ragas 0.4.4 소스 · RAGAS Docs</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>골든셋 한 줄의 구조와 RAGAS 필드명</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect x="1" y="1" width="758" height="378" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="94" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="75" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">10 · 골든셋</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">표준 정답지 한 줄은 이렇게 생겼다</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">06_01 실습에서 LLM이 만든 샘플 예시 · 칸 이름이 RAGAS 필드명과 같아야 한다</text>
+
+  <rect x="28" y="116" width="704" height="214" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+
+  <!-- row user_input -->
+  <rect x="44" y="132" width="168" height="40" rx="10" fill="#F1F5F9"/>
+  <text x="58" y="149" font-size="12.5" font-weight="800" fill="#0F172A">질문</text>
+  <text x="58" y="165" font-size="11" fill="#475569" font-family="Consolas,'Courier New',monospace">user_input</text>
+  <text x="228" y="157" font-size="12.5" fill="#0F172A">원격 근무는 주 몇 회까지 가능하며, 당일 출근 등록은 몇 시까지 하나요?</text>
+
+  <!-- row reference -->
+  <rect x="44" y="182" width="168" height="40" rx="10" fill="#FEF3C7"/>
+  <text x="58" y="199" font-size="12.5" font-weight="800" fill="#78350F">모범 정답</text>
+  <text x="58" y="215" font-size="11" fill="#B45309" font-family="Consolas,'Courier New',monospace">reference</text>
+  <text x="228" y="207" font-size="12.5" fill="#78350F">주 2회 가능하며, 당일 오전 9시까지 근태 채널에 등록해야 합니다.</text>
+
+  <!-- row contexts -->
+  <rect x="44" y="232" width="168" height="40" rx="10" fill="#CCFBF1"/>
+  <text x="58" y="249" font-size="12.5" font-weight="800" fill="#134E4A">근거 문서 (리스트)</text>
+  <text x="58" y="265" font-size="11" fill="#0F766E" font-family="Consolas,'Courier New',monospace">retrieved_contexts</text>
+  <rect x="228" y="238" width="236" height="28" rx="14" fill="#F0FDFA" stroke="#99F6E4"/>
+  <text x="240" y="257" font-size="11.5" fill="#134E4A">근태규정.pdf — 주 2회 재택근무 가능…</text>
+  <rect x="472" y="238" width="96" height="28" rx="14" fill="#F8FAFC" stroke="#CBD5E1" stroke-dasharray="4 3"/>
+  <text x="520" y="257" text-anchor="middle" font-size="11.5" fill="#94A3B8">+ 더 있으면</text>
+
+  <!-- row response -->
+  <rect x="44" y="282" width="168" height="40" rx="10" fill="#FFFFFF" stroke="#818CF8" stroke-dasharray="5 4"/>
+  <text x="58" y="299" font-size="12.5" font-weight="800" fill="#3730A3">실제 답변</text>
+  <text x="58" y="315" font-size="11" fill="#4F46E5" font-family="Consolas,'Courier New',monospace">response</text>
+  <text x="228" y="307" font-size="12.5" fill="#4F46E5">내 RAG가 낸 답 — 생성 품질(Faithfulness·Relevancy) 평가 때 추가</text>
+
+  <g font-size="11.5" font-weight="700">
+    <rect x="28" y="342" width="98" height="26" rx="13" fill="#F1F5F9"/><text x="77" y="360" text-anchor="middle" fill="#334155">단순 사실</text>
+    <rect x="132" y="342" width="98" height="26" rx="13" fill="#F1F5F9"/><text x="181" y="360" text-anchor="middle" fill="#334155">복합 추론</text>
+    <rect x="236" y="342" width="124" height="26" rx="13" fill="#FFF1F2"/><text x="298" y="360" text-anchor="middle" fill="#BE123C">문서 외 함정 질문</text>
+  </g>
+  <text x="732" y="360" text-anchor="end" font-size="11" fill="#94A3B8">출처: ragas 0.4.4 dataset_schema.py · 06_01 실습</text>
+</svg>

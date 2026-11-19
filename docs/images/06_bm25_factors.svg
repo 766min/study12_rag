@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>BM25 점수의 세 요소: TF 포화, IDF, 문서 길이 보정</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect x="1" y="1" width="758" height="388" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="92" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="74" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">06 · BM25</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">BM25 점수를 만드는 세 가지 손잡이</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">TF-IDF를 바탕으로, 많이 나와도 끝없이 오르지 않게 하고 긴 문서는 깎는다</text>
+
+  <!-- card 1 -->
+  <rect x="28" y="116" width="220" height="210" rx="14" fill="#FFFFFF" stroke="#99F6E4" filter="url(#sh)"/>
+  <rect x="42" y="128" width="88" height="22" rx="11" fill="#CCFBF1"/>
+  <text x="86" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#0F766E">① TF 포화</text>
+  <line x1="56" y1="166" x2="56" y2="262" stroke="#CBD5E1" stroke-width="1.4"/>
+  <line x1="56" y1="262" x2="230" y2="262" stroke="#CBD5E1" stroke-width="1.4"/>
+  <line x1="56" y1="182" x2="226" y2="182" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="226" y="176" text-anchor="end" font-size="10.5" font-weight="700" fill="#B45309">상한 (k1)</text>
+  <line x1="58" y1="260" x2="200" y2="168" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M58 260 C 88 206, 130 192, 226 186" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <text x="140" y="278" text-anchor="middle" font-size="10.5" fill="#64748B">단어가 나온 횟수 →</text>
+  <rect x="150" y="226" width="12" height="3" fill="#0F766E"/><text x="166" y="231" font-size="10.5" fill="#0F766E">BM25</text>
+  <rect x="150" y="240" width="12" height="3" fill="#94A3B8"/><text x="166" y="245" font-size="10.5" fill="#64748B">TF-IDF</text>
+  <text x="138" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">10번 나와도 10배가 아니다</text>
+  <text x="138" y="316" text-anchor="middle" font-size="11.5" fill="#64748B">점점 덜 오르다가 멈춘다</text>
+
+  <!-- card 2 -->
+  <rect x="270" y="116" width="220" height="210" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <rect x="284" y="128" width="70" height="22" rx="11" fill="#E0E7FF"/>
+  <text x="319" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">② IDF</text>
+  <line x1="296" y1="262" x2="470" y2="262" stroke="#CBD5E1" stroke-width="1.4"/>
+  <rect x="314" y="236" width="54" height="26" rx="6" fill="#E2E8F0"/>
+  <rect x="400" y="168" width="54" height="94" rx="6" fill="#4F46E5"/>
+  <text x="341" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#64748B">낮음</text>
+  <text x="427" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">높음</text>
+  <text x="341" y="278" text-anchor="middle" font-size="12" font-weight="700" fill="#475569">“규정”</text>
+  <text x="427" y="278" text-anchor="middle" font-size="12" font-weight="700" fill="#312E81">“VPN”</text>
+  <text x="380" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">흔한 단어 ↓ 드문 단어 ↑</text>
+  <text x="380" y="316" text-anchor="middle" font-size="11.5" fill="#64748B">모든 문서에 있는 단어는 변별력 없음</text>
+
+  <!-- card 3 -->
+  <rect x="512" y="116" width="220" height="210" rx="14" fill="#FFFFFF" stroke="#FDE68A" filter="url(#sh)"/>
+  <rect x="526" y="128" width="104" height="22" rx="11" fill="#FEF3C7"/>
+  <text x="578" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#B45309">③ 길이 보정</text>
+  <rect x="540" y="200" width="54" height="62" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <g stroke="#CBD5E1" stroke-width="2"><line x1="548" y1="214" x2="586" y2="214"/><line x1="548" y1="238" x2="586" y2="238"/><line x1="548" y1="250" x2="576" y2="250"/></g>
+  <rect x="548" y="221" width="30" height="10" rx="3" fill="#F59E0B"/>
+  <rect x="640" y="160" width="54" height="102" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <g stroke="#CBD5E1" stroke-width="2"><line x1="648" y1="172" x2="686" y2="172"/><line x1="648" y1="184" x2="686" y2="184"/><line x1="648" y1="196" x2="686" y2="196"/><line x1="648" y1="220" x2="686" y2="220"/><line x1="648" y1="232" x2="686" y2="232"/><line x1="648" y1="244" x2="686" y2="244"/><line x1="648" y1="254" x2="676" y2="254"/></g>
+  <rect x="648" y="203" width="30" height="10" rx="3" fill="#F59E0B"/>
+  <text x="567" y="278" text-anchor="middle" font-size="11.5" font-weight="700" fill="#166534">짧은 문서 ↑</text>
+  <text x="667" y="278" text-anchor="middle" font-size="11.5" font-weight="700" fill="#BE123C">긴 문서 ↓</text>
+  <text x="622" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">같은 1번이라도 짧은 쪽이 유리</text>
+  <text x="622" y="316" text-anchor="middle" font-size="11.5" fill="#64748B">긴 문서는 우연히 포함될 확률↑ (b)</text>
+
+  <rect x="28" y="340" width="380" height="28" rx="14" fill="#F0FDFA" stroke="#99F6E4"/>
+  <text x="218" y="359" text-anchor="middle" font-size="12" fill="#0F766E">rank_bm25 <tspan font-family="Consolas,'Courier New',monospace">BM25Okapi</tspan> 기본값: <tspan font-weight="800">k1=1.5 · b=0.75</tspan></text>
+  <text x="732" y="359" text-anchor="end" font-size="11" fill="#94A3B8">출처: Wikipedia: Okapi BM25 · rank_bm25 0.2.2 소스</text>
+</svg>
