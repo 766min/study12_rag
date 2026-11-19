@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>RAGAS 4대 지표가 비교하는 것: 질문, 검색 문서, 답변, 모범 정답</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect x="1" y="1" width="758" height="418" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="118" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="87" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">09 · 4대 지표 지도</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">각 지표는 무엇과 무엇을 비교하나</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">선 하나가 지표 하나 · 청록은 검색 품질, 남색은 생성 품질</text>
+
+  <!-- edges -->
+  <line x1="138" y1="204" x2="138" y2="300" stroke="#4F46E5" stroke-width="3"/>
+  <line x1="622" y1="204" x2="622" y2="300" stroke="#0F766E" stroke-width="3"/>
+  <line x1="250" y1="300" x2="510" y2="204" stroke="#4F46E5" stroke-width="3"/>
+
+  <!-- nodes -->
+  <rect x="28" y="140" width="220" height="64" rx="14" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#sh)"/>
+  <text x="138" y="166" text-anchor="middle" font-size="15" font-weight="800" fill="#0F172A">질문</text>
+  <text x="138" y="187" text-anchor="middle" font-size="11.5" fill="#64748B" font-family="Consolas,'Courier New',monospace">user_input</text>
+
+  <rect x="512" y="140" width="220" height="64" rx="14" fill="#FFFFFF" stroke="#99F6E4" filter="url(#sh)"/>
+  <text x="622" y="166" text-anchor="middle" font-size="15" font-weight="800" fill="#0F172A">검색된 문서</text>
+  <text x="622" y="187" text-anchor="middle" font-size="11.5" fill="#0F766E" font-family="Consolas,'Courier New',monospace">retrieved_contexts</text>
+
+  <rect x="28" y="300" width="220" height="64" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <text x="138" y="326" text-anchor="middle" font-size="15" font-weight="800" fill="#0F172A">내 RAG의 답변</text>
+  <text x="138" y="347" text-anchor="middle" font-size="11.5" fill="#4F46E5" font-family="Consolas,'Courier New',monospace">response</text>
+
+  <rect x="512" y="300" width="220" height="64" rx="14" fill="#FFFFFF" stroke="#FDE68A" filter="url(#sh)"/>
+  <text x="622" y="326" text-anchor="middle" font-size="15" font-weight="800" fill="#0F172A">모범 정답</text>
+  <text x="622" y="347" text-anchor="middle" font-size="11.5" fill="#B45309" font-family="Consolas,'Courier New',monospace">reference</text>
+
+  <!-- labels -->
+  <rect x="62" y="238" width="152" height="28" rx="14" fill="#4F46E5"/>
+  <text x="138" y="257" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Response Relevancy</text>
+  <rect x="320" y="238" width="120" height="28" rx="14" fill="#4F46E5"/>
+  <text x="380" y="257" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Faithfulness</text>
+  <rect x="548" y="222" width="148" height="26" rx="13" fill="#0F766E"/>
+  <text x="622" y="240" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Context Precision</text>
+  <rect x="556" y="256" width="132" height="26" rx="13" fill="#0F766E"/>
+  <text x="622" y="274" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Context Recall</text>
+
+  <!-- tiny captions -->
+  <text x="224" y="282" font-size="10.5" fill="#4338CA">동문서답?</text>
+  <text x="380" y="230" text-anchor="middle" font-size="10.5" fill="#4338CA">문서에 근거? (환각)</text>
+  <text x="632" y="294" font-size="10.5" fill="#0F766E">빠짐없이 가져왔나?</text>
+
+  <text x="732" y="398" text-anchor="end" font-size="11" fill="#94A3B8">출처: ragas 0.4.4 소스 (metrics/) · RAGAS Docs</text>
+</svg>

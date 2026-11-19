@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Pretendard,'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>HyDE: 가상 답변을 만들어 그 벡터로 검색한다</title>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/></filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9z" fill="#94A3B8"/></marker>
+    <pattern id="g" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#CBD5E1"/></pattern>
+  </defs>
+  <rect x="1" y="1" width="758" height="398" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+
+  <rect x="28" y="22" width="88" height="24" rx="12" fill="#EEF2FF"/>
+  <text x="72" y="39" text-anchor="middle" font-size="12" font-weight="700" fill="#4338CA">08 · HyDE</text>
+  <text x="28" y="76" font-size="21" font-weight="800" fill="#0F172A">질문 대신 가상 답변으로 검색한다</text>
+  <text x="28" y="98" font-size="13" fill="#64748B">Hypothetical Document Embeddings · 041-04 실습 예시</text>
+
+  <!-- question -->
+  <rect x="28" y="116" width="156" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#sh)"/>
+  <rect x="42" y="128" width="50" height="22" rx="11" fill="#F1F5F9"/>
+  <text x="67" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">질문</text>
+  <text x="44" y="182" font-size="13" font-weight="700" fill="#0F172A">열이 펄펄 끓고</text>
+  <text x="44" y="202" font-size="13" font-weight="700" fill="#0F172A">목이 따가울 때</text>
+  <text x="44" y="222" font-size="13" font-weight="700" fill="#0F172A">먹는 약</text>
+  <text x="44" y="252" font-size="11" fill="#94A3B8">짧고 구어체</text>
+
+  <line x1="186" y1="191" x2="206" y2="191" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- llm -->
+  <rect x="210" y="146" width="96" height="90" rx="14" fill="#FFFFFF" stroke="#C7D2FE" filter="url(#sh)"/>
+  <circle cx="258" cy="178" r="17" fill="#E0E7FF"/>
+  <path d="M258 166 L261 175 L270 178 L261 181 L258 190 L255 181 L246 178 L255 175 Z" fill="#4F46E5"/>
+  <text x="258" y="214" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0F172A">LLM</text>
+  <text x="258" y="229" text-anchor="middle" font-size="10.5" fill="#4F46E5">답변 상상하기</text>
+
+  <line x1="308" y1="191" x2="328" y2="191" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- hypothetical doc -->
+  <rect x="332" y="116" width="208" height="150" rx="14" fill="#FFFFFF" stroke="#FDE68A" filter="url(#sh)"/>
+  <rect x="346" y="128" width="80" height="22" rx="11" fill="#FEF3C7"/>
+  <text x="386" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#B45309">가상 답변</text>
+  <text x="348" y="176" font-size="12" fill="#334155">발열과 인후통에는</text>
+  <text x="348" y="194" font-size="12" fill="#334155">해열진통제를 복용하며,</text>
+  <text x="348" y="212" font-size="12" fill="#334155">증상이 지속되면 …</text>
+  <rect x="346" y="228" width="180" height="24" rx="12" fill="#FFF1F2" stroke="#FECDD3"/>
+  <text x="436" y="244" text-anchor="middle" font-size="11.5" font-weight="700" fill="#BE123C">세부 내용이 틀려도 괜찮다</text>
+
+  <line x1="542" y1="191" x2="562" y2="191" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- space -->
+  <rect x="566" y="116" width="166" height="150" rx="14" fill="#FFFFFF" stroke="#99F6E4" filter="url(#sh)"/>
+  <rect x="567" y="117" width="164" height="148" rx="13" fill="url(#g)"/>
+  <rect x="580" y="128" width="96" height="22" rx="11" fill="#CCFBF1"/>
+  <text x="628" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#0F766E">문서 벡터 공간</text>
+  <g fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"><circle cx="596" cy="176" r="4"/><circle cx="700" cy="170" r="4"/><circle cx="604" cy="240" r="4"/><circle cx="712" cy="236" r="4"/><circle cx="686" cy="206" r="4"/></g>
+  <circle cx="644" cy="208" r="20" fill="none" stroke="#F59E0B" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <polygon points="636,198 638.2,203 643.6,203.4 639.6,207 640.8,212.4 636,209.6 631.2,212.4 632.4,207 628.4,203.4 633.8,203" fill="#F59E0B"/>
+  <circle cx="652" cy="216" r="5" fill="#0F766E" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="648" y="256" text-anchor="middle" font-size="11" font-weight="700" fill="#0F766E">“해열제 복용 안내”</text>
+
+  <!-- compare -->
+  <rect x="28" y="282" width="344" height="52" rx="12" fill="#FFF1F2" stroke="#FECDD3"/>
+  <text x="44" y="303" font-size="12" font-weight="800" fill="#9F1239">그냥 검색</text>
+  <text x="44" y="322" font-size="12" fill="#9F1239">짧은 질문 ↔ 긴 문서: 표현이 달라 잘 안 맞음</text>
+  <rect x="388" y="282" width="344" height="52" rx="12" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="404" y="303" font-size="12" font-weight="800" fill="#065F46">HyDE</text>
+  <text x="404" y="322" font-size="12" fill="#065F46">가상 답변 ↔ 문서: 단어·문체가 비슷해 잘 맞음</text>
+
+  <rect x="28" y="348" width="470" height="28" rx="14" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="263" y="367" text-anchor="middle" font-size="12" fill="#92400E">논문: 인코더가 <tspan font-weight="800">틀린 세부 내용은 걸러 내고</tspan> 실제 문서 근처를 찾는다</text>
+  <text x="732" y="367" text-anchor="end" font-size="11" fill="#94A3B8">출처: Gao et al. 2023 (ACL)</text>
+</svg>
