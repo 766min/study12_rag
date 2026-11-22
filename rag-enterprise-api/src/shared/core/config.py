@@ -1,3 +1,4 @@
+# .env를 읽어서 settings 객체로 제공하는 역할
 import os
 from dotenv import load_dotenv
 
@@ -5,8 +6,8 @@ load_dotenv()
 
 class Settings:
     # LLM 모델 설정
-    API_KEY: str = os.getenv("OPENAI_API_KEY2", "")
-    EMBEDDING_MODEL: str = os.getenv("ENBEDDING_MODEL", "text-embedding-3-small")
+    API_KEY: str = os.getenv("OPENAI_API_KEY", "")
+    EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
     LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "openai")
     LLM_MODEL: str = os.getenv("LLM_MODEL", "gpt-5-mini")
     REASONING_EFFORT: str = os.getenv("REASONING_EFFORT", "low")

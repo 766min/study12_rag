@@ -1,4 +1,5 @@
 # 모든 /v1/... 엔드포인트의 응답을 표준화하는 제네릭 APIResponse[T] 스키마
+# 모든 API 응답의 표준 포멧
 from datetime import datetime, timezone
 from typing import Any, Generic, TypeVar
 from pydantic import BaseModel, Field

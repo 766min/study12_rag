@@ -1,3 +1,4 @@
+# LLM, 임베딩, PGVector 스토어, DB 연결을 만드는 팩토리 함수
 from typing import Protocol, Any
 import psycopg
 from langchain.chat_models import init_chat_model
@@ -13,7 +14,7 @@ from shared.core.logger import get_logger
 logger = get_logger(__name__)
 
 def get_llm() -> BaseChatModel: # 질문에 답변을 생성할 LLM (채팅 모델)
-    """"설정된 프로바이더에 맞는 채팅 모델 인스턴스를 추상 타입으로 반환합니다."""
+    """설정된 프로바이더에 맞는 채팅 모델 인스턴스를 추상 타입으로 반환합니다."""
     return init_chat_model(
         model=settings.LLM_MODEL,
         model_provider=settings.LLM_PROVIDER,
@@ -31,7 +32,7 @@ def get_embeddings() -> Embeddings: # 텍스트를 벡터(숫자 배열)로 바�
 def get_vector_store(collection_name: str) -> VectorStore: # 벡터를 저장/검색하는 Postgres 기반 임베딩 모델
     """지정된 컬렉션 이름의 벡터 스토어를 공통 VectorStore 인터페이스로 반환합니다."""
     return PGVector(
-        Embeddings=get_embeddings(),
+        embeddings=get_embeddings(),
         collection_name=collection_name,
         connection=settings.DATABASE_URL,
         distance_strategy=DistanceStrategy.COSINE,
@@ -42,9 +43,9 @@ class DBConnection(Protocol): # DB연결이라면 최소한 이런 메서드들�
     def cursor(self) -> Any: ...
     def commit(self) -> None: ... 
     def rollback(self) -> None: ...
-    def close(slef) -> None: ...
+    def close(self) -> None: ...
 
-def get_rw_db_connection() -> DBConnection: # 벡터 DB와는 별개로, SQL을 직접 날릴 수 있는 원시 DB 연결
-    """충분 해시 조회 및 BM25 코퍼스 로드를 위한 DB 커넥션을 반환합니다."""
+def get_raw_db_connection() -> DBConnection: # 벡터 DB와는 별개로, SQL을 직접 날릴 수 있는 원시 DB 연결
+    """증분 해시 조회 및 BM25 코퍼스 로드를 위한 DB 커넥션을 반환합니다."""
     raw_dsn = settings.DATABASE_URL.replace("postgresql+psycopg://", "postgresql://")
     return psycopg.connect(raw_dsn)

@@ -1,3 +1,4 @@
+# 로그 형식과 레벨 설정
 import os
 import logging
 from dotenv import load_dotenv
